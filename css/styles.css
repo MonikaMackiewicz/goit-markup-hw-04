@@ -4,6 +4,7 @@
   --less-i-tex: #757575;
   --background: #ffffff;
   --portfolio-button: #f5f4fa;
+  --our-clients:#AFB1B8;
 }
 
 * {
@@ -67,18 +68,15 @@ nav {
   flex-grow: 0;
   justify-content: flex-end;
 }
-.envelope::before {
-  content: url(../icons.svg.svg);
-  height: 16px;
-  width: 10px;
-  background: var(--less-i-tex);
-}
 
-.phone::before {
-  content: url(../icons.svg.svg);
-  height: 16px;
-  width: 10px;
-  background: var(--background);
+.envelope,
+.smartphone {
+  margin-right: 10px;
+  fill: #757575;
+}
+.envelope:hover,
+.smartphone:hover {
+  fill: var(--accent-color);
 }
 
 .menu-nav-link {
@@ -101,9 +99,10 @@ ul {
 
 .section-1 {
   padding: 200px 0;
-  background-color: #2f303a;
+  background-color: linear-gradient (rgba(47, 48, 58, 0.4));
   background-image: url(../images/ImgHeader.jpg);
-  background-size: cover;
+  max-width: 1600px;
+  margin: auto;
 }
 
 .h1-button {
@@ -176,11 +175,25 @@ ul {
   display: flex;
   gap: 30px;
   padding: 0;
+  margin: 0;
 }
 
 .li-display {
   flex-basis: calc((100% - 20px) / 4);
   padding: 0;
+}
+
+.li-display > svg {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: var(--portfolio-button);
+border-radius: 4px;
+}
+
+
+.li-display-svg {
+  width: 70px;
+ height: 70px;
 }
 
 .ul-display-2 {
@@ -189,7 +202,7 @@ ul {
   justify-content: space-between;
   gap: 30px;
   padding-left: 0;
-}
+ }
 
 .shadow {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -209,6 +222,7 @@ ul {
   text-transform: uppercase;
   color: var(--main-color);
   padding-bottom: 10px;
+  padding-top: 30px;
 }
 
 .lorem {
@@ -256,6 +270,27 @@ ul {
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.our-clients {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.our-clients > svg {
+  fill:var(--our-clients);
+}
+
+.our-clients > svg:hover {
+  fill: var(--accent-color);
+}
+
+.frame {
+width: 170px;
+height: 92px;
+border: 1px solid var(--our-clients);
+border-radius: 4px;
 }
 
 .footer {
