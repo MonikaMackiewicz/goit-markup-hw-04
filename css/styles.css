@@ -75,7 +75,9 @@ nav {
   fill: #757575;
 }
 .envelope:hover,
-.smartphone:hover {
+.smartphone:hover,
+.envelope:focus,
+.smartphone:focus {
   fill: var(--accent-color);
 }
 
@@ -99,7 +101,10 @@ ul {
 
 .section-1 {
   padding: 200px 0;
-  background-color: linear-gradient (rgba(47, 48, 58, 0.4));
+  background-image: linear-gradient(
+    to bottom,
+    var(--background),
+    var(--our-clients));
   background-image: url(../images/ImgHeader.jpg);
   max-width: 1600px;
   margin: auto;
@@ -181,21 +186,18 @@ ul {
 .li-display {
   flex-basis: calc((100% - 20px) / 4);
   padding: 0;
-}
+ }
 
-.li-display > svg {
+.lorem-svg {
   padding-top: 25px;
   padding-bottom: 25px;
   background-color: var(--portfolio-button);
-border-radius: 4px;
-}
-
-
-.li-display-svg {
-  width: 70px;
- height: 70px;
-}
-
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  }
+ 
 .ul-display-2 {
   display: flex;
   align-items: flex-start;
@@ -204,16 +206,11 @@ border-radius: 4px;
   padding-left: 0;
  }
 
-.shadow {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+ .shadow {
   background: var(--background);
-}
-
-.foto {
-  display: block;
-}
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+ }
 
 .h3 {
   font-weight: 700;
@@ -230,6 +227,7 @@ border-radius: 4px;
   line-height: 1.71;
   color: var(--less-i-tex);
   letter-spacing: 0.03em;
+  flex-wrap: wrap;
 }
 
 .h2-font {
@@ -272,25 +270,54 @@ border-radius: 4px;
   padding-bottom: 10px;
 }
 
+.we-svg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 30px 30px 30px;
+}
+.svg-circle {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--our-clients);
+}
+
+.svg-circle:focus,
+.svg-circle:hover {
+  fill: var(--background);
+  background-color: var(--accent-color);
+}
+
 .our-clients {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: center;
 }
 
-.our-clients > svg {
-  fill:var(--our-clients);
+.wider {
+  width: 1170px;
 }
-
-.our-clients > svg:hover {
-  fill: var(--accent-color);
-}
-
 .frame {
-width: 170px;
-height: 92px;
-border: 1px solid var(--our-clients);
-border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--our-clients);
+  border-radius: 4px;
+  fill: var(--our-clients);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+
+.frame:focus,
+.frame:hover {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 .footer {
