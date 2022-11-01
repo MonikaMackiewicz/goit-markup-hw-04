@@ -5,6 +5,7 @@
   --background: #ffffff;
   --portfolio-button: #f5f4fa;
   --our-clients:#AFB1B8;
+  --footer-color:#2F303A;
 }
 
 * {
@@ -71,9 +72,13 @@ nav {
 
 .envelope,
 .smartphone {
-  margin-right: 10px;
-  fill: #757575;
+ fill: #757575;
 }
+
+..envelope::before,
+.smartphone::before {
+}
+
 .envelope:hover,
 .smartphone:hover,
 .envelope:focus,
@@ -321,7 +326,7 @@ ul {
 }
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -342,7 +347,7 @@ ul {
 }
 
 .logo-2 {
-  color: #ffffff;
+  color: var(--background)
 }
 
 .logo:visited {
@@ -357,7 +362,7 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
-  color: #ffffff;
+  color: var(--background);
   letter-spacing: 0.03em;
 }
 
@@ -365,7 +370,35 @@ ul {
   padding: 0;
   margin: 9 0 0 0;
 }
+.footer-svg {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--background);
+}
 
+.footer-svg:focus,
+.footer-svg:hover {
+  fill: var(--background);
+  background-color: var(--accent-color);
+}
+
+.footer-display {
+  display: flex;
+  align-items: center;
+ }
+
+.footer-socials {
+  justify-content: flex-start;
+  margin-left: 70px;
+  width: 206px;
+}
+
+.footer-sm {
+  padding: 20px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+
+
+}
 .ul-button {
   display: flex;
   align-content: center;
