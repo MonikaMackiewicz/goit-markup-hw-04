@@ -70,20 +70,28 @@ nav {
   justify-content: flex-end;
 }
 
+.header-svg {
+  margin-right: 10px;
+ }
+
 .envelope,
 .smartphone {
- fill: #757575;
-}
+ fill: var(--less-i-tex);
+ display: inline-flex;
+ justify-content: center;
+ align-items: center;
+} 
 
-..envelope::before,
+.envelope::before,
 .smartphone::before {
+  fill: var(--less-i-tex);
 }
 
 .envelope:hover,
 .smartphone:hover,
 .envelope:focus,
 .smartphone:focus {
-  fill: var(--accent-color);
+  stroke: var(--accent-color);
 }
 
 .menu-nav-link {
